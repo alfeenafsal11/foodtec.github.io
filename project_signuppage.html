@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title id="pagetitle">SignUp| The FoodTec</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            text-align: center;
+			background-image: url();
+			height: 100%;
+			background-size: 80%;
+			background-position: center;
+        }
+		
+		#pageheader {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+			margin-top: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+			align: center;
+            margin: 20px;
+            padding: 75px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			display: inline-block;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin: 10px -5;
+        }
+
+		#SignUpbutton{
+			color: white;
+		}
+
+        input {
+            width: relative;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+			
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+		
+		.button{
+			align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			display: inline-block;
+            text-align: left;			
+		}
+		
+		.button:hover {
+			text-decoration: underline;
+		}
+    </style>
+	<head>
+		<h1 id="pageheader">SignUp to The Nomadic Transit</h1>
+	</head>
+	<body>
+		<section class="SignUp">
+			<p>Create your own account here</p>
+			<p><h5>First name: </h5>
+			<label for="firstname" id="firstname-label"><input id="firstname" type="text" placeholder="Enter your firstname" required></label>
+			</p>
+			<p><h5>Last name: </h5>
+			<label  for="lastname" id="lastname-label"><input id="lastname" type="text" placeholder="Enter your lastname" required></label>
+			</p>
+			<p><h5>Middle name: </h5>
+			<label for="middlename" id="middlename-label"><input id="middlename" type="text" placeholder="Enter your middlename"></label>
+			</p>
+			<p><h5>Date of birth: </h5>
+			<label id="dob-label">
+				<label for="dateofbirth" id="date"><input id="dateofbirth" type="number" placeholder="date of birth" min="1" max="31" required></label>
+				<label for="monthofbirth" id="month"><input id="monthofbirth" type="number" placeholder="month of birth" min="1" max="12" required></label>
+				<label for="yearofbirth" id="year"><input id="yearofbirth" type="number" placeholder="year of birth" min="1920" max="2008" required></label>
+			</label>
+			</p>
+			<p><h5>Phone: </h5>
+			<label for="phonenumber" id="phone-label"><input id="phonenumber" type="number" placeholder="Enter your phone number" required></label>
+			</p>
+			<p><h5>Email: </h5>
+			<label for="Email"id="Email-label"><input id="email" type="Email" placeholder="Enter your Email address"></label>
+			</p>
+			<p><h5>Password: </h5>
+			<label for="password" id="password-label"><input id="password" type="Password" placeholder="Enter your password" required></label>
+			</p>
+			<p><h5>Confirm Password</h5>
+			<label for="Confirmpassword" id="password-label"><input id="Confirmpassword" type="Password" placeholder="Confirm your password" required></label>
+			</p>
+		</section>
+		<section class="button">
+			<button id="signup-button" type="submit" onclick="saveData()"><a href="project_profilepage.html" id="SignUpbutton">SignUp</a></button>
+		</section>
+		<script>
+			function saveData() {
+				var firstData = document.getElementById("firstname").value;
+
+				if (firstData.trim() !== "") {
+					localStorage.setItem("firstname", firstData);
+					window.location.href = "project_profilepage.html";
+				} 
+				else {
+					alert("Please enter your first name.");
+				}
+				var lastData = document.getElementById("lastname").value;
+
+				if (lastData.trim() !== "") {
+					localStorage.setItem("lastname", lastData);
+					window.location.href = "project_profilepage.html";
+				} 
+				else {
+					alert("Please enter your last name.");
+				}
+				var middleData = document.getElementById("middlename").value;
+				var dateData = document.getElementById("dateofbirth").value;
+				var monthData = document.getElementById("monthofbirth").value;
+				var yearData = document.getElementById("yearofbirth").value;
+
+				if (yearData.trim() !== "" || monthData.trim()!=="" || dateData.trim()!=="") {
+					localStorage.setItem("dob", dateData+"/"+monthData+"/"+yearData);
+					window.location.href = "project_profilepage.html";
+				} 
+				else {
+					alert("Please enter a valid date.");
+				}
+				var phoneData = document.getElementById("phonenumber").value;
+
+				if (len(phoneData)==10) {
+					localStorage.setItem("phonenumber", phoneData);
+					window.location.href = "project_profilepage.html";
+				} 
+				else {
+					alert("Invalid Phone number.");
+				}
+				var emailData = document.getElementById("email").value;
+
+				if (emailData.trim() !== "") {
+					localStorage.setItem("email", emailData);
+					window.location.href = "project_profilepage.html";
+				} 
+				else {
+					alert("Invalid Email.");
+				}
+				var passData=document.getElementById("password").value;
+				var confpassData=document.getElementById("Confirmpassword").value;
+				
+				if (passData==confpassData) {
+					localStorage.setItem("password",passData);
+					window.location.href = "project_profilepage.html";
+				}
+				else{
+					alert("Passwords	 doesn't match")}
+			}
+		</script>
+	</body>
+</html>

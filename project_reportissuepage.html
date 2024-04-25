@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Problem| The FoodTec</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+			text-align: center;
+		}
+		
+		#pageheader {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+			margin-top: 0;
+        }
+		
+		
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        select, .input-checkbox {
+            margin-bottom: 10px;
+        }
+
+        .clue {
+            color: #999;
+            font-style: italic;
+        }
+
+        .input-checkbox {
+            margin-right: 5px;
+        }
+		
+				
+		input {
+			vertical-align: middle;
+			position: relative;
+		}
+		
+		label{
+			display: block;
+		}
+
+        #Submit {
+            margin-top: 20px;
+        }
+
+        #submit-button, #skip-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+		#firstsec {
+			background-color: #fff;
+			padding: 20px;
+			margin: 20px auto;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+		}
+		#buttonlink{
+			color: white;
+		}
+    </style>
+	<head>
+		<h1 id="pageheader">Report Food Waste Issues</h1>
+	</head>
+	<body>
+	<section id="firstsec">
+		<p>1. What type of food waste issue are you reporting?</p>
+		<select id="dropdown" required>
+			<option value="Select an option">Select an option</option>
+			<option value="Select an option">Select an option</option>
+            <option value="Excess food waste at local restaurants">Excess food waste at local restaurants</option>
+            <option value="Food waste at community events">Food waste at community events</option>
+            <option value="Food waste in household garbage">Food waste in household garbage</option>
+            <option value="Expired food products in stores">Expired food products in stores</option>
+        </select>
+		<section>
+		 <p>2. Where is the food waste issue located?</p>
+        <select id="dropdown" required>
+            <option value="Select an option">Select an option</option>
+            <option value="Local restaurants">Local restaurants</option>
+            <option value="Community centers">Community centers</option>
+            <option value="Households">Households</option>
+            <option value="Stores or supermarkets">Stores or supermarkets</option>
+        </select>
+
+        <p>3. What type of action would you like to see taken to address this issue?</p>
+        <select id="dropdown" required>
+            <option value="Select an option">Select an option</option>
+            <option value="Implement food waste reduction programs">Implement food waste reduction programs</option>
+            <option value="Educational campaigns on reducing food waste">Educational campaigns on reducing food waste</option>
+            <option value="Stricter regulations on food waste disposal">Stricter regulations on food waste disposal</option>
+            <option value="Encourage food donation and composting">Encourage food donation and composting</option>
+        </select>
+		<section id="Submit">
+			<button id="submit-button"><a id="buttonlink" href="project_profilepage.html">Submit</button>
+			<button id="skip-button">Skip</button>
+		</section>
+	</section>
+	</body>
+</html>

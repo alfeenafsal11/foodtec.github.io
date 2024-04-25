@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home| The FoodTec</title>
+	<style>
+body {
+    font-family: 'Gotham 7r','Gotham A','Gotham B', 'Arial', 'sans-serif';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 21px;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+header {
+    background-image: url(https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_1280,ar_16:9/v1/img/recipes/35/93/14/JTe4EYLTrCvzwwdC4BXi_green-onion-pesto-linguini-salmon-4929.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#Siteheader {
+    font-family: 'Gotham 7r','Gotham A','Gotham B', 'Arial', 'sans-serif';
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 0;
+    text-transform: none;
+    color: #fff;
+    padding: 20px;
+}
+
+#Sitefooter {
+    font-family: 'Gotham 7r','Gotham A','Gotham B', 'Arial', 'sans-serif';
+    font-size: 30px;
+    letter-spacing: -2px;
+    color: #fff;
+    padding: 5px;
+}
+
+.navigation {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#icon-grid {
+    display: flex;
+}
+
+#icon-grid button {
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-list li {
+    margin-right: 10px;
+}
+
+#nav-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#article-grid {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#articlebox {
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #eaeaea;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#articlename {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#content {
+    color: #666;
+}
+
+#next, #previous {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#next:hover, #previous:hover {
+    background-color: #45a049;
+}
+
+.trends-grid {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.article-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.article-link {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.article-image {
+    width: 80%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.popular-blogs {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#choose {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#blog {
+    margin-bottom: 10px;
+}
+
+#blog a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+#blog a:hover {
+    background-color: #ddd;
+}
+
+.join-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#joincontent {
+    text-align: center;
+}
+
+#joinlink, #profilelink {
+    color: white;
+}
+
+#accountcreate, #accountlogin {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.support-grid {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.support-grid button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#support-grid {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#Contact {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+#Contact p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#contct-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#contct-list li {
+    margin-right: 10px;
+    position: relative;
+}
+
+#contct-list a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+#contct-list img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+		</style>
+</head>
+<body>
+    <header id="Siteheader">
+        <h1>FoodTec</h1>
+        <p id="Sitefooter">Reducing Waste, Nourishing Communities</p>
+    </header>
+
+    <section class="navigation">
+        <nav id="navbar">
+            <div id="icon-grid"><div id="icon-grid">
+                    <button id="search-icon" type="submit"><i class="fas fa-search"></i></button>
+                    <button id="menu-icon" type="dropdown"><i class="fas fa-lines"></i></button>
+            </div>
+            </div>
+            <ul id="nav-list">
+                <li>
+                    <a href="#About">About</a>
+                </li>
+                <li>
+                    <a href="#Tips">Tips</a>
+                </li>
+                <li>
+                    <a href="#Initiatives">Initiatives</a>
+                </li>
+                <li>
+                    <a href="#Contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="article-grid">
+        <div id="articles">
+            <div id="articlebox">
+                <h3 id="articlename">Understanding Food Waste: Causes and Solutions</h3>
+                <p id="content">Learn about the factors contributing to food wastage and how you can take action to mitigate them.</p>
+            </div>
+            <div id="articlebox">
+                <h3 id="articlename">Creative Ways to Reduce Food Waste at Home</h3>
+                <p id="content">Discover innovative strategies for minimizing food wastage in your daily life.</p>
+            </div>
+			<button id="next">Next</button>
+            <button id="previous">Previous</button>
+        </div>
+    </section>
+
+    <section class="trends-grid">
+        <div class="trends">
+            <h3>Take Action Now:</h3>
+                <div  class="article-grid">
+                        <a class="article-link" target="_blank" href="https://mde.maryland.gov/programs/land/RecyclingandOperationsprogram/Documents/www.mde.state.md.us/assets/document/Food%20Scraps/wasted-food-IP.pdf">
+                            <img class="article-image" src="https://images.unsplash.com/photo-1562077981-4d7eafd44932?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Rm9vZCUyMFdhc3RlJTIwUGlsZSUzQXxlbnwwfHwwfHx8MA%3D%3D">
+                            <p class="project-tile">
+                            <span>Food Waste Pile</span>
+                            </p>
+                        </a>
+                        <a class="article-link" target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0960852419317857">
+                            <img class="article-image" src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q29tcG9zdGluZyUyMEJpbnxlbnwwfHwwfHx8MA%3D%3D">
+                            <p>
+                            <span>Composting Bin</span>
+                            </p>
+                        </a>
+                        <a class="article-link" target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0168160500001616">
+                            <img class="article-image" src="https://images.unsplash.com/photo-1464454709131-ffd692591ee5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Rm9vZCUyMFByZXNlcnZhdGlvbiUyMFRlY2huaXF1ZXN8ZW58MHx8MHx8fDA%3D">
+                            <p>
+                            <span>Food Preservation Techniques</span>
+                            </p>
+                        </a>
+                    </div>
+        </div>
+    </section>
+
+    <section id="Tips" class="popular-blogs">
+        <div>
+            <h2>Practical Tips:</h2>
+            <ul id="choose">
+                <li id="blog"><a href="#">How to Store Food to Extend Shelf Life</a></li>
+                <li id="blog"><a href="#">Meal Planning to Minimize Food Waste</a></li>                    
+                <li id="blog"><a href="#">Creative Recipes for Leftover Ingredients</a></li>
+                </ul>
+        </div>
+    </section>
+
+    <section class="join-grid">
+        <div id="whytojoin">
+            <p id="joincontent">Be part of our passionate community dedicated to ending food wastage.</p>
+			<p>Together, we're forging a path towards a brighter, more sustainable future where every bite counts and every action makes a difference.</p>
+			<p>Join us in the journey towards a world where food waste is a thing of the past,</p>
+			<p> and abundance is shared equitably, one meal at a time!</p>
+        </div>
+        <div id="jointoprofile">
+				<h3>Create an Account</h3>
+                <button id="accountcreate" ><a id="joinlink" href="file:///C:/Users/HP/OneDrive/Desktop/project_signuppage.html">JOIN</a></button>
+                <h3>Already have an account?</h3>
+                <button id="accountlogin"><a id="profilelink" href="file:///C:/Users/HP/OneDrive/Desktop/project%20loginpage.html">Go to your profile</a></button>
+        </div>
+    </section>
+	<section id="About" class="support-grid">
+            <div class="extras">
+                <h3>Become a Supporter</h3>
+                    <div id="support-grid">
+                        <p>Join our Discord Community</p>
+                            <button id="discordlink">Discord Community</button>
+                        <p>Share us your </p>
+                            <button id="contentshare">Share</button	>
+                        <p>Colaborate with us</p>
+                            <button id="colabs">TeamUp</button>
+                    </div>
+            </div>
+    </section>
+    <section id="Contact">
+        <p>You can contact us at:</p>
+			<div>
+				<ul id="contct-list">
+					<li><a href="www.facebook.com"><img src="https://cdn.iconscout.com/icon/free/png-512/free-facebook-logo-2019-1597680-1350125.png?f=webp&w=256"></a>Facebook</li>
+					<li><a href="www.twitter.com"><img src="https://toppng.com/uploads/preview/twitter-x-new-logo-icon-png-11692480121koxvq54was.webp"></a>X-twitter</li>
+					<li><a href="www.linkedin.com"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/linkedin-2752135-2284952.png?f=webp&w=256"></a>LinkedIn</li>
+					<li><a href="www.github.com"><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"></a>github</li>
+				</ul>
+			</div>
+    </section>
+</body>
+</html>

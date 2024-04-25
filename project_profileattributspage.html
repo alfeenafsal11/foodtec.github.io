@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Attributes | FoodTec</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+			text-align: center;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 0;
+        }
+        
+        h1 {
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        select, .input-checkbox {
+            margin-bottom: 10px;
+        }
+
+        .clue {
+            color: #999;
+            font-style: italic;
+        }
+
+        .input-checkbox {
+            margin-right: 5px;
+        }
+
+        input {
+            vertical-align: middle;
+            position: relative;
+        }
+
+        label {
+            display: block;
+        }
+
+        #Submit {
+            margin-top: 20px;
+        }
+
+        #submit-button, #skip-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        #submit-button:hover, #skip-button:hover {
+            background-color: #555;
+        }
+
+        #firstsec {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+		#buttonlink{
+			color: white;
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complete Your Food Waste Profile</h1>
+    </header>
+    <section id="firstsec">
+        <p>1. How would you describe your current food consumption habits?</p>
+        <select id="dropdown" required>
+            <option value="Select an option">Select an option</option>
+            <option value="I try to minimize food waste by planning meals carefully">I try to minimize food waste by planning meals carefully</option>
+            <option value="I sometimes end up with leftover food, but I try to use it up or store it for later">I sometimes end up with leftover food, but I try to use it up or store it for later</option>
+            <option value="I often have leftover food that goes to waste">I often have leftover food that goes to waste</option>
+            <option value="I rarely have leftover food">I rarely have leftover food</option>
+        </select>
+        <p>2. How often do you check the expiration dates of the food items in your pantry?</p>
+        <select id="expiration" required>
+            <option value="Select an option">Select an option</option>
+            <option value="Regularly">Regularly</option>
+            <option value="Occasionally">Occasionally</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Never">Never</option>
+        </select>
+        <p>3. Do you compost organic waste?</p>
+        <select id="compost" required>
+            <option value="Select an option">Select an option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <p>4. How often do you eat out or order takeout?</p>
+        <select id="eatout" required>
+            <option value="Select an option">Select an option</option>
+            <option value="Several times a week">Several times a week</option>
+            <option value="Once a week">Once a week</option>
+            <option value="A few times a month">A few times a month</option>
+            <option value="Rarely">Rarely</option>
+        </select>
+        <p>5. Would you be interested in learning more about reducing food waste and proper food disposal techniques?</p>
+        <select id="learning" required>
+            <option value="Select an option">Select an option</option>
+            <option value="Yes, definitely">Yes, definitely</option>
+            <option value="Maybe, if it's convenient">Maybe, if it's convenient</option>
+            <option value="Not interested">Not interested</option>
+        </select>
+        <section id="Submit">
+            <button id="submit-button"><a id="buttonlink" href="project_profilepage.html">Submit</button>
+            <button id="skip-button">Skip</button>
+        </section>
+    </section>
+</body>
+</html>

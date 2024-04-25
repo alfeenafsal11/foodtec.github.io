@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration| The FoodTec</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+			text-align: center;
+		}
+		
+		#pageheader {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+			margin-top: 0;
+        }
+		
+		
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        select, .input-checkbox {
+            margin-bottom: 10px;
+        }
+
+        .clue {
+            color: #999;
+            font-style: italic;
+        }
+
+        .input-checkbox {
+            margin-right: 5px;
+        }
+		
+				
+		input {
+			vertical-align: middle;
+			position: relative;
+		}
+		
+		label{
+			display: block;
+		}
+
+        #Submit {
+            margin-top: 20px;
+        }
+
+        #submit-button, #skip-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+		#firstsec {
+			background-color: #fff;
+			padding: 20px;
+			margin: 20px auto;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+		}
+		#buttonlink{
+			color: white;
+		}
+    </style>
+	<head>
+		<h1 id="pageheader">Register for Food Waste Management Courses</h1>
+	</head>
+	<body>
+	<section id="firstsec">
+		<p>1. How many people are in your family?</p>
+        <select id="dropdown" required>
+            <option value="Select an option">Select an option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5+">5+</option>
+        </select>
+		<section>
+		<p>
+			2. What timing would you prefer for the course?
+			<span class="clue">(Check all that apply)</span>
+		</p>
+        <label>
+          <input name="prefer" value="Morning" type="checkbox" class="input-checkbox">
+          Morning
+        </label>
+        <label>
+          <input name="prefer" value="Afternoon" type="checkbox" class="input-checkbox">
+          Afternoon
+        </label>
+        <label>
+          <input name="prefer" value="Evening" type="checkbox" class="input-checkbox">
+          Evening
+        </label>
+        <label>
+          <input name="prefer" value="Night" type="checkbox" class="input-checkbox">
+          Night
+        </label>
+		<p>
+			3. How long would you prefer the course to be?
+			<span class="clue">(Check all that apply)</span>
+		</p>
+        <label>
+          <input name="prefer" value="less than 1 hour" type="checkbox" class="input-checkbox">
+          less than 1 hour
+        </label>
+        <label>
+          <input name="prefer" value="1-2 hours" type="checkbox" class="input-checkbox">
+        1-2 hours
+        </label>
+		<label>
+          <input name="prefer" value="2-5 hours" type="checkbox" class="input-checkbox">
+        2-5 hours
+        </label>
+		<label>
+          <input name="prefer" value="more than 5 hours" type="checkbox" class="input-checkbox">
+        more than 5 hours
+        </label>
+		</section>
+		<p>
+			4. In which language would you prefer the course?
+		</p>
+		<section>
+        <select id="dropdown" required>
+            <option value="Select an option">Select an option</option>
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+			<option value="Hindi">Hindi</option>
+			<option value="Telugu">Telugu</option>
+			<option value="Tamil">Tamil</option>
+			<option value="Malayalam">Malayalam</option>
+            <option value="Other">Other</option>
+        </select>
+		</section>
+		<section id="Submit">
+			<button id="submit-button"><a id="buttonlink" href="project_profilepage.html">Submit</button>
+			<button id="skip-button">Skip</button>
+		</section>
+	</section>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta viewport="width=deivce-width" initial-scale="1.0">
+	<title id="title">LogIn| The FoodTec</title>
+	 <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            text-align: center;
+			height: 100%;
+			background-size: 80%;
+			background-position: center;
+        }
+		
+		#pageheader {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+			margin-top: 0;
+        }
+		
+        h1 {
+			padding: 10px;
+            color: #333;
+			background-color: #fff;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #signup-button {
+            background-color: #3498db;
+        }
+
+        p {
+            color: #777;
+        }
+		#buttonlink {
+			color: white;
+		}
+    </style>
+	<head>
+		<h1 id="pageheader">Login to FoodTec Profile</h1>
+		<p>Login to your feed</p>
+	</head>
+	<body>
+	<section class="Login">
+		<label id="username-label"><input id="username" placeholder="Enter your username/Email Address">Username:</input>
+		<label  id="password-label"><input id="password" placeholder="Enter your password">Password</input>
+		<button id="login-button" type="submit"><a href="">Login</a></button>
+	</section>
+	<section class="Signup">
+		<p>Not a member yet?</p>
+		<button id="signup-button" type="submit"><a id="buttonlink" href="project_signuppage.html">SignUp</a></button>
+	</section>
+	<script>
+        document.getElementById("login-button").addEventListener("click", function(event) {
+            event.preventDefault(); 
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username.trim() !== "" && password.trim() !== "") {
+                window.location.href = "project_profilepage.html";
+            } else {
+                alert("Please enter your username/email and password.");
+            }
+        });
+    </script>
+	</body>
+</html>
